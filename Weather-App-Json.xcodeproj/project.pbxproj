@@ -13,6 +13,13 @@
 		D433B81727D0DC0C00794A3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D433B81527D0DC0C00794A3C /* Main.storyboard */; };
 		D433B81927D0DC0D00794A3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D433B81827D0DC0D00794A3C /* Assets.xcassets */; };
 		D433B81C27D0DC0D00794A3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D433B81A27D0DC0D00794A3C /* LaunchScreen.storyboard */; };
+		D433B82527D0F16400794A3C /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433B82427D0F16400794A3C /* CurrentWeather.swift */; };
+		D433B82727D0F4D600794A3C /* CurrentWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D433B82627D0F4D600794A3C /* CurrentWeatherModel.swift */; };
+		D4E9CED727D1F0A700100F8F /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9CED627D1F0A700100F8F /* JSONDownloader.swift */; };
+		D4E9CED927D1F2C600100F8F /* DarkSkyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9CED827D1F2C600100F8F /* DarkSkyError.swift */; };
+		D4E9CEDB27D2209300100F8F /* DarkApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9CEDA27D2209300100F8F /* DarkApiClient.swift */; };
+		D4E9CEDD27D2220200100F8F /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9CEDC27D2220200100F8F /* Coordinate.swift */; };
+		D4E9CEDF27D237CD00100F8F /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E9CEDE27D237CD00100F8F /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		D433B81827D0DC0D00794A3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D433B81B27D0DC0D00794A3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D433B81D27D0DC0D00794A3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D433B82427D0F16400794A3C /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		D433B82627D0F4D600794A3C /* CurrentWeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModel.swift; sourceTree = "<group>"; };
+		D4E9CED627D1F0A700100F8F /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		D4E9CED827D1F2C600100F8F /* DarkSkyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkSkyError.swift; sourceTree = "<group>"; };
+		D4E9CEDA27D2209300100F8F /* DarkApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkApiClient.swift; sourceTree = "<group>"; };
+		D4E9CEDC27D2220200100F8F /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		D4E9CEDE27D237CD00100F8F /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +70,54 @@
 		D433B80E27D0DC0C00794A3C /* Weather-App-Json */ = {
 			isa = PBXGroup;
 			children = (
-				D433B80F27D0DC0C00794A3C /* AppDelegate.swift */,
-				D433B81127D0DC0C00794A3C /* SceneDelegate.swift */,
-				D433B81327D0DC0C00794A3C /* ViewController.swift */,
+				D4E9CED527D1F08B00100F8F /* Data */,
+				D433B82927D0F79400794A3C /* Delegate */,
+				D433B82827D0F76D00794A3C /* View */,
+				D433B82327D0F15000794A3C /* Model */,
 				D433B81527D0DC0C00794A3C /* Main.storyboard */,
 				D433B81827D0DC0D00794A3C /* Assets.xcassets */,
 				D433B81A27D0DC0D00794A3C /* LaunchScreen.storyboard */,
 				D433B81D27D0DC0D00794A3C /* Info.plist */,
 			);
 			path = "Weather-App-Json";
+			sourceTree = "<group>";
+		};
+		D433B82327D0F15000794A3C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D433B82427D0F16400794A3C /* CurrentWeather.swift */,
+				D433B82627D0F4D600794A3C /* CurrentWeatherModel.swift */,
+				D4E9CEDE27D237CD00100F8F /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D433B82827D0F76D00794A3C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D433B81327D0DC0C00794A3C /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D433B82927D0F79400794A3C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				D433B80F27D0DC0C00794A3C /* AppDelegate.swift */,
+				D433B81127D0DC0C00794A3C /* SceneDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		D4E9CED527D1F08B00100F8F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D4E9CED627D1F0A700100F8F /* JSONDownloader.swift */,
+				D4E9CED827D1F2C600100F8F /* DarkSkyError.swift */,
+				D4E9CEDA27D2209300100F8F /* DarkApiClient.swift */,
+				D4E9CEDC27D2220200100F8F /* Coordinate.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +191,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4E9CED927D1F2C600100F8F /* DarkSkyError.swift in Sources */,
+				D4E9CEDB27D2209300100F8F /* DarkApiClient.swift in Sources */,
+				D4E9CED727D1F0A700100F8F /* JSONDownloader.swift in Sources */,
 				D433B81427D0DC0C00794A3C /* ViewController.swift in Sources */,
+				D4E9CEDF27D237CD00100F8F /* Weather.swift in Sources */,
 				D433B81027D0DC0C00794A3C /* AppDelegate.swift in Sources */,
+				D4E9CEDD27D2220200100F8F /* Coordinate.swift in Sources */,
+				D433B82727D0F4D600794A3C /* CurrentWeatherModel.swift in Sources */,
+				D433B82527D0F16400794A3C /* CurrentWeather.swift in Sources */,
 				D433B81227D0DC0C00794A3C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
